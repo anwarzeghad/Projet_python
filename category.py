@@ -18,11 +18,11 @@ class categoryClass:
         #--------------- title ---------------------
         lbl_title=Label(self.root,text="Manage Product Category",font=("goudy old style",30),bg="#184a45",fg="white",bd=3,relief=RIDGE).pack(side=TOP,fill=X,padx=10,pady=20)
         
-        lbl_mame=Label(self.root,text="Enter Category Name",font=("goudy old style",30),bg="white").place(x=50,y=100)
-        txt_mame=Entry(self.root,textvariable=self.var_name,bg="lightyellow",font=("goudy old style",18)).place(x=50,y=170,width=300)
+        lbl_mame=Label(self.root,text="Enter Category Name",font=("goudy old style",30), bg="white", fg= "black").place(x=50,y=100)
+        txt_mame=Entry(self.root,textvariable=self.var_name,bg="lightyellow", insertbackground="black", fg= "black",font=("goudy old style",18)).place(x=50,y=170,width=300)
 
-        btn_add=Button(self.root,text="ADD",command=self.add,font=("goudy old style",15),bg="#4caf50",fg="white",cursor="hand2").place(x=360,y=170,width=150,height=30)
-        btn_delete=Button(self.root,text="Delete",command=self.delete,font=("goudy old style",15),bg="red",fg="white",cursor="hand2").place(x=520,y=170,width=150,height=30)
+        btn_add=Button(self.root,text="ADD",command=self.add,font=("goudy old style",15),bg="#4caf50",fg="black",cursor="hand2").place(x=360,y=170,width=150,height=30)
+        btn_delete=Button(self.root,text="Delete",command=self.delete,font=("goudy old style",15),bg="red",fg="black",cursor="hand2").place(x=520,y=170,width=150,height=30)
 
         #------------ category details -------------
         cat_frame=Frame(self.root,bd=3,relief=RIDGE)

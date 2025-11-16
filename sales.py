@@ -18,18 +18,18 @@ class salesClass:
         #--------------- title ---------------------
         lbl_title=Label(self.root,text="View Customer Bills",font=("goudy old style",30),bg="#184a45",fg="white",bd=3,relief=RIDGE).pack(side=TOP,fill=X,padx=10,pady=20)
         
-        lbl_invoice=Label(self.root,text="Invoice No.",font=("times new roman",15),bg="white").place(x=50,y=100)
-        txt_invoice=Entry(self.root,textvariable=self.var_invoice,font=("times new roman",15),bg="lightyellow").place(x=160,y=100,width=180,height=28)
+        lbl_invoice=Label(self.root,text="Invoice No.",font=("times new roman",15),bg="white", fg= "black").place(x=50,y=100)
+        txt_invoice=Entry(self.root,textvariable=self.var_invoice,font=("times new roman",15),bg="lightyellow", insertbackground="black", fg= "black").place(x=160,y=100,width=180,height=30)
 
-        btn_search=Button(self.root,text="Search",command=self.search,font=("times new roman",15,"bold"),bg="#2196f3",fg="white",cursor="hand2").place(x=360,y=100,width=120,height=28)
-        btn_clear=Button(self.root,text="Clear",command=self.clear,font=("times new roman",15,"bold"),bg="lightgray",cursor="hand2").place(x=490,y=100,width=120,height=28)
+        btn_search=Button(self.root,text="Search",command=self.search,font=("times new roman",15,"bold"),bg="#2196f3",fg="black",cursor="hand2").place(x=360,y=100,width=120,height=30)
+        btn_clear=Button(self.root,text="Clear",command=self.clear,font=("times new roman",15,"bold"),bg="lightgray",cursor="hand2").place(x=490,y=100,width=120,height=30)
 
         #----------------- bill list -------------------
         sales_Frame=Frame(self.root,bd=3,relief=RIDGE)
         sales_Frame.place(x=50,y=140,width=200,height=330)
 
         scrolly=Scrollbar(sales_Frame,orient=VERTICAL)
-        self.Sales_List=Listbox(sales_Frame,font=("goudy old style",15),bg="white",yscrollcommand=scrolly.set)
+        self.Sales_List=Listbox(sales_Frame,font=("goudy old style",15),bg="white", fg="black", yscrollcommand=scrolly.set)
         scrolly.pack(side=RIGHT,fill=Y)
         scrolly.config(command=self.Sales_List.yview)
         self.Sales_List.pack(fill=BOTH,expand=1)
@@ -42,7 +42,7 @@ class salesClass:
         lbl_title2=Label(bill_Frame,text="Customer Bill Area",font=("goudy old style",20),bg="orange").pack(side=TOP,fill=X)
         
         scrolly2=Scrollbar(bill_Frame,orient=VERTICAL)
-        self.bill_area=Text(bill_Frame,bg="lightyellow",yscrollcommand=scrolly2.set)
+        self.bill_area=Text(bill_Frame,bg="lightyellow", insertbackground="black", fg= "black",yscrollcommand=scrolly2.set)
         scrolly2.pack(side=RIGHT,fill=Y)
         scrolly2.config(command=self.bill_area.yview)
         self.bill_area.pack(fill=BOTH,expand=1)
